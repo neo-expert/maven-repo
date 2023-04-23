@@ -140,59 +140,6 @@
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </repository>
   </repositories>
-  <dependencies>
-    <dependency>
-      <groupId>org.joml</groupId>
-      <artifactId>joml</artifactId>
-      <version>1.10.5</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.lwjgl</groupId>
-      <artifactId>lwjgl</artifactId>
-      <version>3.3.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.lwjgl</groupId>
-      <artifactId>lwjgl-glfw</artifactId>
-      <version>3.3.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.lwjgl</groupId>
-      <artifactId>lwjgl-opengl</artifactId>
-      <version>3.3.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.lwjgl</groupId>
-      <artifactId>lwjgl</artifactId>
-      <version>3.3.1</version>
-      <classifier>natives-linux</classifier>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.lwjgl</groupId>
-      <artifactId>lwjgl-opengl</artifactId>
-      <version>3.3.1</version>
-      <classifier>natives-linux</classifier>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.lwjgl</groupId>
-      <artifactId>lwjgl-glfw</artifactId>
-      <version>3.3.1</version>
-      <classifier>natives-linux</classifier>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.json</groupId>
-      <artifactId>json</artifactId>
-      <version>20220320</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
   <properties>
     <repository-name>maven-repo</repository-name>
     <repository-owner>neo-expert</repository-owner>
