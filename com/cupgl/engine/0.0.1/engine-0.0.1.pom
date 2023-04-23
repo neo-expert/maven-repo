@@ -12,7 +12,6 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
         <lwjgl.version>3.3.0</lwjgl.version>
-        <joml.version>1.10.5</joml.version>
         <repository-name>maven-repo</repository-name>
         <repository-owner>neo-expert</repository-owner>
         <branch-name>com.cupgl.gl</branch-name>
@@ -23,16 +22,19 @@
             <groupId>com.github.stephengold</groupId>
             <artifactId>Libbulletjme</artifactId>
             <version>18.1.0</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.joml</groupId>
             <artifactId>joml</artifactId>
-            <version>${joml.version}</version>
+            <version>1.10.5</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.cupgl</groupId>
             <artifactId>gl</artifactId>
             <version>0.0.1</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.bubblecloud.jbullet</groupId>
@@ -56,13 +58,12 @@
             <groupId>com.cupgl</groupId>
             <artifactId>gl</artifactId>
             <version>0.0.1</version>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.cupgl</groupId>
             <artifactId>os</artifactId>
             <version>0.0.1</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.cupgl</groupId>
@@ -76,31 +77,21 @@
     <build>
         <finalName>engine</finalName>
         <plugins>
-            <!--
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <artifactSet>
-                                <includes>
-                                    <include>com.cupgl:gl</include>
-                                    <include>com.cupgl:os</include>
-                                    <include>org.joml:joml</include>
-                                    <include>com.github.stephengold:Libbulletjme</include>
-                                </includes>
-                            </artifactSet>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            -->
+		<plugin>
+			<groupId>com.cupgl</groupId>
+			<artifactId>cup-maven-plugin</artifactId>
+			<version>0.0.1</version>
+			<executions>
+				<execution>
+					<goals>
+						<goal>cup</goal>
+					</goals>
+				</execution>
+			</executions>
+			<configuration>
+				<scope>test</scope>
+			</configuration>
+		</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
